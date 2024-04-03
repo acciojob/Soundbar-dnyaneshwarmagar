@@ -4,14 +4,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
   buttons.forEach(button => {
     button.addEventListener('soundstart', function(event) {
-      const soundFile = e.target.getAttribute('data-sound');
-      playSound(soundFile);
+     
+      const audio = document.getElementById('audio');
+    audio.src = 'https://www.w3schools.com/jsref/horse.ogg';
+    audio.play()
     });
   });
-
-  function playSound(soundFile) {
-    const audio = document.getElementById('audio');
-    audio.src = `sounds/${soundFile}`;
-    audio.play();
-  }
-});
