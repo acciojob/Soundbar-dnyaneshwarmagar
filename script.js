@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function playSound(soundFile) {
-    const audio = document.createElement('audio');
+    const audio = document.getElementById('audio');
     audio.src = `sounds/${soundFile}`;
     audio.play();
   }
