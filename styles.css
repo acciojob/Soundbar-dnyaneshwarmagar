@@ -1,7 +1,21 @@
-/*  your css code here. If applicable */
 body{
 	background-color:blueviolet;
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
+}
+button{
+	border:none;
+	background-color:darkviolet;
+	color:white;
+	border-radius:10%;
+	width:100px;
+	height:60px;
+	justify-items:space-between;
+	margin:30px;
+	text-align:center;
+	margin: 10px;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+.stop {
+  background-color: red;
 }

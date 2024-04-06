@@ -5,17 +5,20 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+<body>
+	<div class="parent">
+ <div id="buttons">
+    <button id="buttons" class="btn" onclick="playSound('applause.mp3')">applause</button>
+    <button id="buttons" class="btn" onclick="playSound('boo.mp3')">boo</button>
+    <button id="buttons" class="btn" onclick="playSound('gasp.mp3')">gasp</button>
+    <button id="buttons" class="btn" onclick="playSound('tada.mp3')">tada</button>
+    <button id="buttons" class="btn" onclick="playSound('victory.mp3')">victory</button>
+    <button id="buttons" class="btn" onclick="playSound('wrong.mp3')">wrong</button>
+    <button class="btn stop" onclick="stopSounds()">stop</button>
+  </div>
+	</div>
 
-<body id="buttons">
-	<!-- the entire body must be written by student -->
-	<div id="container">
-    <button class="btn" data-sound="applause.mp3">applause</button>
-    <button class="btn" data-sound="boo.mp3">boo</button>
-    <button class="btn" data-sound="gasp.mp3">gasp</button>
-    <button class="btn" data-sound="todo.mp3">todo</button>
-    <button class="btn" data-sound="victory.mp3">victory</button>
-    <button class="btn" data-sound="wrong.mp3">wrong</button>
-    <button class="btn stop">stop</button>
+	
     <script type="text/javascript" src="./script.js">
 </script>
 
