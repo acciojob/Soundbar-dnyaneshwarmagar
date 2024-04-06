@@ -1,12 +1,21 @@
 //your JS code here. If required.
-document.addEventListener('DOMContentLoaded', function(e) {
-  const buttons = document.querySelectorAll('.sound-button');
+let currentAudio = null;
 
-  buttons.forEach(button => {
-    button.addEventListener('soundstart', function(event) {
-     
-      const audio = document.getElementById('audio');
-    audio.src = 'https://www.w3schools.com/jsref/horse.ogg';
-    audio.play()
-    });
-  });
+function playSound(soundUrl) {
+    // If there's an audio playing, stop it first
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    // Use the provided URL for the sound
+    currentAudio = new Audio(soundUrl);
+    currentAudio.play();
+}
+
+function stopSound() {
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+}
