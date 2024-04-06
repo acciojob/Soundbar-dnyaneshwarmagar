@@ -1,7 +1,7 @@
 const audio = new Audio();
 let playing = null;
 
-function PlayingAudio(sounds) {
+function playSound(sounds) {
   if (playing !== null) {
     stopSound();
   }
