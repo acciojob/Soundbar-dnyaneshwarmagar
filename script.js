@@ -1,18 +1,16 @@
-const audio = new Audio();
-let playing = null;
-
-function playSound(sounds) {
-  if (playing !== null) {
-    stopSound();
-  }
-
-  audio.src = `sounds/${sounds}`;
-  audio.play();
-  playing = sounds;
+//your JS code here. If required.
+function playSound(soundName) {
+    var audio = document.createElement('audio');
+    audio.src = 'sounds/' + soundName + '.mp3';
+    audio.play();
+    document.body.appendChild(audio);
 }
 
-function stopSounds() {
-  audio.pause();
-  audio.currentTime = 0;
-  playing = null;
+function stopAllSounds() {
+    var sounds = document.getElementsByTagName('audio');
+    for (var i = 0; i < sounds.length; i++) {
+        sounds[i].pause();
+        sounds[i].currentTime = 0;
+        document.body.removeChild(sounds[i]); // Remove audio elements from DOM
+    }
 }
